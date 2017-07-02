@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">kotlin-anko-coroutines-example</string>
+    <string name="say_hello">Say hello</string>
+    <string name="hello_world">Hello, world!</string>
 </resources>

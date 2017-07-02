@@ -3,10 +3,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-kapt {
-    generateStubs = true
-}
-
 android {
     compileSdkVersion 25
     buildToolsVersion "26.0.0"
@@ -33,6 +29,16 @@ android {
     }
 }
 
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -47,6 +53,4 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
-repositories {
-    mavenCentral()
-}
+
